@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../components/Button';
 
 const TitleDeedsPage = () => (
   <div>
@@ -10,9 +11,13 @@ const TitleDeedsPage = () => (
       <li>Legal consultation on property rights</li>
       <li>Title insurance</li>
     </ul>
-    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
-      Request Title Deed Service
-    </button>
+    <Button 
+      variant="primary" 
+      size="medium"
+      whatsapp="Hi, I'm interested in your title deed services. Can you provide more information?"
+    >
+      Request Title Deed Service via WhatsApp
+    </Button>
   </div>
 );
 

@@ -1,14 +1,12 @@
 import React from 'react';
 
-const PropertyCard = ({ property }) => (
-  <div className="bg-white p-4 rounded-lg shadow-md">
+const PropertyCard = ({ property, actionButton }) => (
+  <div className="bg-white p-4 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-xl">
     <h3 className="text-xl font-semibold mb-2">{property.title}</h3>
     <p className="text-gray-600 mb-2">{property.location}</p>
     <p className="mb-2">Area: {property.area}</p>
-    <p className="text-lg font-bold text-blue-600">{property.price}</p>
-    <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
-      View Details
-    </button>
+    <p className="text-lg font-bold text-blue-600 mb-4">{property.price}</p>
+    {actionButton}
   </div>
 );
 

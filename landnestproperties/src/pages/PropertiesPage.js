@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { Search } from 'lucide-react';
+import { FaSearch } from 'react-icons/fa';
 import PropertyCard from '../components/PropertyCard';
+import Button from '../components/Button'; // Import the Button component
 
 const PropertiesPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [properties, setProperties] = useState([
-    { id: 1, title: 'Scenic Hilltop Land', area: '5 acres', price: '$500,000', location: 'Hilltop Valley' },
-    { id: 2, title: 'Riverside Plot', area: '3 acres', price: '$350,000', location: 'Riverbank County' },
-    { id: 3, title: 'Commercial Land', area: '2 acres', price: '$750,000', location: 'Downtown District' },
-    { id: 4, title: 'Agricultural Land', area: '10 acres', price: '$400,000', location: 'Farmville' },
+    // ... your properties data
   ]);
 
   const filteredProperties = properties.filter(property =>
@@ -27,11 +25,23 @@ const PropertiesPage = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <Search className="absolute left-3 top-2.5 text-gray-400" size={20} />
+        <FaSearch className="absolute left-3 top-2.5 text-gray-400" size={20} />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredProperties.map(property => (
-          <PropertyCard key={property.id} property={property} />
+          <PropertyCard 
+            key={property.id} 
+            property={property}
+            actionButton={ // Pass the Button component as a prop
+              <Button 
+                variant="primary" 
+                size="medium"
+                whatsapp={`Hi, I'm interested in the ${property.title} property. Can you provide more information?`}
+              >
+                Inquire via WhatsApp
+              </Button>
+            }
+          />
         ))}
       </div>
     </div>

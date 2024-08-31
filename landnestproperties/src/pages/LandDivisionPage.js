@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../components/Button';
 
 const LandDivisionPage = () => (
   <div>
@@ -22,9 +23,13 @@ const LandDivisionPage = () => (
         <p>Prepare and file all necessary legal documents for land division.</p>
       </div>
     </div>
-    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
-      Inquire About Land Division
-    </button>
+    <Button 
+      variant="primary" 
+      size="medium"
+      whatsapp="Hi, I'm interested in your land division services. Can you provide more information?"
+    >
+      Inquire About Land Division via WhatsApp
+    </Button>
   </div>
 );
 
