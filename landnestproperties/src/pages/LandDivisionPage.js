@@ -28,7 +28,7 @@ const LandDivisionPage = () => (
       size="medium"
       whatsapp="Hi, I'm interested in your land division services. Can you provide more information?"
     >
-      Inquire About Land Division via WhatsApp
+      Inquire About Land Division 
     </Button>
   </div>
 );

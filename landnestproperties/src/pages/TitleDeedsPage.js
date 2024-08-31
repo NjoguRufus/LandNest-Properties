@@ -16,7 +16,7 @@ const TitleDeedsPage = () => (
       size="medium"
       whatsapp="Hi, I'm interested in your title deed services. Can you provide more information?"
     >
-      Request Title Deed Service via WhatsApp
+      Request Title Deed Service 
     </Button>
   </div>
 );

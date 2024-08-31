@@ -38,7 +38,7 @@ const PropertiesPage = () => {
                 size="medium"
                 whatsapp={`Hi, I'm interested in the ${property.title} property. Can you provide more information?`}
               >
-                Inquire via WhatsApp
+                Inquire 
               </Button>
             }
           />
